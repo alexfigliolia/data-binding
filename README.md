@@ -54,13 +54,13 @@ subscription()
 import { DataBinding } from "@figliolia/data-binding";
 
 class CounterButton extends HTMLElement {
+  node = document.createElement("button");
+  binding = new DataBinding(0, (nextValue) => {
+    this.node.textContent = `${nextValue}`;
+  });
   constructor() {
     super();
-    this.node = document.createElement("button");
     this.increment = this.increment.bind(this);
-    this.binding = new DataBinding(0, (nextValue) => {
-      this.node.textContent = `${nextValue}`;
-    });
   }
 
   connectedCallback() {
@@ -91,15 +91,15 @@ Usage:
 import { DataBinding } from "@figliolia/data-binding";
 
 class DynamicTabs extends HTMLElement {
+  buttons: HTMLButtonElement[] = [];
+  contentCache = new Map<string, string>();
+  contentNode = document.createElement("p");
+  contentSignal = new DataBinding("Loading...", content => {
+    this.contentNode.textContent = content;
+  });
   constructor() {
     super();
-    this.buttons: HTMLButtonElement[] = [];
     this.onTabClick = this.onTabClick.bind(this);
-    this.contentCache = new Map<string, string>();
-    this.contentNode = document.createElement("p");
-    this.contentSignal = new DataBinding("Loading...", content => {
-      this.contentNode.textContent = content;
-    })
   }
 
   connectedCallback() {
