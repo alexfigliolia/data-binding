@@ -93,7 +93,7 @@ import { DataBinding } from "@figliolia/data-binding";
 class DynamicTabs extends HTMLElement {
   constructor() {
     super();
-    this.buttons = [];
+    this.buttons: HTMLButtonElement[] = [];
     this.onTabClick = this.onTabClick.bind(this);
     this.contentCache = new Map<string, string>();
     this.contentNode = document.createElement("p");
@@ -109,9 +109,9 @@ class DynamicTabs extends HTMLElement {
       const tab = tabs[i];
       const buttons = document.createElement("button");
       button.textContent = tab;
-      if(i === this.activeTabIndex) {
+      if(i === 0) {
         button.classList.add("active");
-        this.fetchContent(tab);
+        void this.fetchContent(tab);
       }
       button.addEventListener("click", this.onTabClick);
       this.buttons.push(button);
@@ -134,7 +134,7 @@ class DynamicTabs extends HTMLElement {
         tab.classList.remove("active");
       } else {
         e.target.classList.add("active");
-        this.fetchContent(e.target.textContent);
+        void this.fetchContent(e.target.textContent);
       }
     }
   }
@@ -145,18 +145,21 @@ class DynamicTabs extends HTMLElement {
     }
     this.contentSignal.update("Loading...");
     const param = tab.toLowerCase().replaceAll(" ", "-");
-    fetch(`/api/tab-content?tab=${param}`).then((response) => {
-      this.contentCache.set(tab, response.data);
-      this.contentSignal.update(response.data);
+    fetch(`/api/tab-content?tab=${param}`).then(async (response) => {
+      const data = await response.json();
+      this.contentCache.set(tab, data.content);
+      this.contentSignal.update(data.content);
     });
   } 
  
   parseTabs() {
-    const tabs = [];
-    let increment = 0;
-    while(tab = this.getAttribute(`tab${increment}`)) {
+    const tabs: string[] = [];
+    let increment = 1;
+    let tab = this.getAttribute(`tab${increment}`)
+    while(tab) {
       tabs.push(tab);
       increment++;
+      tab = this.getAttribute(`tab${increment}`)
     }
     return tabs;
   }
