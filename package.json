@@ -1,7 +1,7 @@
 {
   "name": "@figliolia/data-binding",
   "version": "1.0.0",
-  "description": "A basic data binding library using JavaScript signals",
+  "description": "A basic data binding library using signals",
   "main": "dist/cjs/index.js",
   "scripts": {
     "build": "ts-packager -e src",
@@ -12,7 +12,11 @@
     "dist",
     "src"
   ],
-  "keywords": [],
+  "keywords": [
+    "data-binding",
+    "DOM",
+    "UI"
+  ],
   "author": "Alex Figliolia",
   "license": "MIT",
   "devDependencies": {
