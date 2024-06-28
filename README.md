@@ -12,7 +12,7 @@ To create a data-binding for a DOM node or attribute, import the `DataBinding` a
 import { DataBinding } from "@figliolia/data-binding";
 
 // Select a DOM node(s) with which to bind data
-const paragraph = document.getElementById("#myParagraph");
+const paragraph = document.getElementById("myParagraph");
 
 // Create your binding with an initial value and an update function
 const signal = new DataBinding(
