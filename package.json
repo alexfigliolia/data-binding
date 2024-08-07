@@ -1,7 +1,7 @@
 {
   "name": "@figliolia/data-binding",
-  "version": "1.0.0",
-  "description": "A basic data binding library using signals",
+  "version": "1.0.1",
+  "description": "A data binding library driven by JavaScript signals",
   "main": "dist/cjs/index.js",
   "scripts": {
     "build": "ts-packager -e src",
@@ -19,6 +19,14 @@
   ],
   "author": "Alex Figliolia",
   "license": "MIT",
+  "dependencies": {
+    "@figliolia/event-emitter": "^1.1.4",
+    "@figliolia/frame-pooler": "^1.0.9"
+  },
+  "peerDependencies": {
+    "@figliolia/event-emitter": "^1.1.4",
+    "@figliolia/frame-pooler": "^1.0.9"
+  },
   "devDependencies": {
     "@figliolia/child-process": "^1.0.1",
     "@jest/globals": "^29.7.0",
@@ -42,7 +50,6 @@
     "ts-jest": "^29.1.5",
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.8",
-    "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   },
   "exports": {
@@ -56,8 +63,5 @@
   "types": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@figliolia/event-emitter": "^1.1.4"
   }
 }

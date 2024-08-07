@@ -22,22 +22,12 @@ describe("Workflow", () => {
     };
     node.addEventListener("click", increment);
     document.body.appendChild(node);
-    await new Promise<void>(resolve => {
-      const listener = DataBinding["callStack"].subscribe(() => {
-        expect(node.textContent).toEqual("0");
-        expect(binding.value).toEqual(0);
-        listener();
-        resolve();
-      });
-    });
+    await Promise.resolve();
+    expect(node.textContent).toEqual("0");
+    expect(binding.value).toEqual(0);
     node.click();
-    await new Promise<void>(resolve => {
-      const listener = DataBinding["callStack"].subscribe(() => {
-        expect(node.textContent).toEqual("1");
-        expect(binding.value).toEqual(1);
-        listener();
-        resolve();
-      });
-    });
+    await Promise.resolve();
+    expect(node.textContent).toEqual("1");
+    expect(binding.value).toEqual(1);
   });
 });

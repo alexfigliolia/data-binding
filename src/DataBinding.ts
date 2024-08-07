@@ -1,10 +1,10 @@
-import { CallStack } from "./CallStack";
+import { FramePooler } from "@figliolia/frame-pooler";
 import { Signal } from "./Signal";
 
 export class DataBinding<T> extends Signal<T> {
   destroy: () => void;
   private modifier: (value: T) => void;
-  private static callStack = new CallStack();
+  private static callStack = new FramePooler(100);
   constructor(initialValue: T, modifier: (value: T) => void) {
     super(initialValue);
     this.modifier = modifier;
@@ -15,11 +15,11 @@ export class DataBinding<T> extends Signal<T> {
   }
 
   private updateDOMNode(value: T) {
-    DataBinding.callStack.push(() => {
+    DataBinding.callStack.run(() => {
       try {
         this.modifier(value);
       } catch (error) {
-        this.destroy();
+        // silence
       }
     });
   }
