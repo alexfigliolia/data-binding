@@ -1,5 +1,5 @@
 {
-  "tsx": {
+  "ts-node": {
     "typeCheck": false,
     "compilerOptions": {
       "module": "CommonJS",

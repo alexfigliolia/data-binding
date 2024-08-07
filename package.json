@@ -1,11 +1,11 @@
 {
   "name": "@figliolia/data-binding",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A data binding library driven by JavaScript signals",
   "main": "dist/cjs/index.js",
   "scripts": {
     "build": "ts-packager -e src",
-    "lint": "tsx ci/commands/Lint.ts",
+    "lint": "ts-node ci/commands/Lint.ts",
     "test": "jest"
   },
   "files": [
@@ -21,11 +21,11 @@
   "license": "MIT",
   "dependencies": {
     "@figliolia/event-emitter": "^1.1.4",
-    "@figliolia/frame-pooler": "^1.0.9"
+    "@figliolia/frame-pooler": "^1.1.0"
   },
   "peerDependencies": {
     "@figliolia/event-emitter": "^1.1.4",
-    "@figliolia/frame-pooler": "^1.0.9"
+    "@figliolia/frame-pooler": "^1.1.0"
   },
   "devDependencies": {
     "@figliolia/child-process": "^1.0.1",
