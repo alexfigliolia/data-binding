@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@figliolia/child-process": "^1.0.1",
+    "@figliolia/ts-packager": "^1.1.0",
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.19",
