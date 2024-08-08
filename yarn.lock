@@ -333,6 +333,11 @@
   resolved "https://registry.yarnpkg.com/@figliolia/event-emitter/-/event-emitter-1.1.4.tgz#c4377c808ee7e4a19dfe37d8a0277b7f9a763467"
   integrity sha512-0UmkV2yY2h+HEYY96FbEYMumNK8A9XNqwWtA4r7wgnyjbQ7ehtRS38+bMO2+5sdbnibRIbZYC1U4hgnjb701cA==
 
+"@figliolia/event-emitter@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@figliolia/event-emitter/-/event-emitter-1.1.5.tgz#0c2786da56997d518cba8e542501aeead75cb1d4"
+  integrity sha512-l7luLvIKPDgzF2dtuFd5SbO3i6fK0s1KRSmouUQddl9ZyxXpOKk/JLi0bLpLyzp+KjZMw1AUHXHT4ZYhEAICWg==
+
 "@figliolia/frame-pooler@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@figliolia/frame-pooler/-/frame-pooler-1.1.0.tgz#bfeb7e116f52adb3b8d0198e37650492342b10df"

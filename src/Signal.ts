@@ -1,4 +1,4 @@
-import { Subscriptable } from "./Subscriptable";
+import { Subscriptable } from "@figliolia/event-emitter";
 import type { Observer } from "./types";
 
 export class Signal<T> extends Subscriptable<Observer<T>> {
@@ -10,11 +10,11 @@ export class Signal<T> extends Subscriptable<Observer<T>> {
 
   public update(value: T) {
     this.value = value;
-    this.emit(this.value);
+    this.execute(this.value);
   }
 
   public subscribe(observer: Observer<T>) {
-    const ID = this.add(observer);
+    const ID = this.register(observer);
     return () => {
       this.remove(ID);
     };

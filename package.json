@@ -1,6 +1,6 @@
 {
   "name": "@figliolia/data-binding",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A data binding library driven by JavaScript signals",
   "main": "dist/cjs/index.js",
   "scripts": {
@@ -20,11 +20,11 @@
   "author": "Alex Figliolia",
   "license": "MIT",
   "dependencies": {
-    "@figliolia/event-emitter": "^1.1.4",
+    "@figliolia/event-emitter": "^1.1.5",
     "@figliolia/frame-pooler": "^1.1.0"
   },
   "peerDependencies": {
-    "@figliolia/event-emitter": "^1.1.4",
+    "@figliolia/event-emitter": "^1.1.5",
     "@figliolia/frame-pooler": "^1.1.0"
   },
   "devDependencies": {
