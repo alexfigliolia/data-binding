@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@figliolia/event-emitter": "^1.1.5",
-    "@figliolia/frame-pooler": "^1.1.0"
+    "@figliolia/frame-pooler": "^1.1.1"
   },
   "peerDependencies": {
     "@figliolia/event-emitter": "^1.1.5",

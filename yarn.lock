@@ -321,10 +321,10 @@
   resolved "https://registry.yarnpkg.com/@figliolia/child-process/-/child-process-1.0.4.tgz#5337c847f43a08ff9e1124793fa650f746515da5"
   integrity sha512-midiGoIu0pO9q+T607iYFSsEFSg6XlWJ7REaGcX/mCuxgrr8hudGSPz4OzyXznVUlp1UwaVTjfgYHlSUxuaJXg==
 
-"@figliolia/data-structures@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@figliolia/data-structures/-/data-structures-1.0.7.tgz#476e5c8bd3678dcf7fada524d5278516898c910e"
-  integrity sha512-L2h/7EbNTy7Svnp5rq1dXoGodgqtVbKnryxT7Uxjv0xqcd3et1TJsuIi1l1TaTdYwYtTanhfqD1ghjRQmztfvQ==
+"@figliolia/data-structures@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@figliolia/data-structures/-/data-structures-1.0.8.tgz#bce752319e37b38637f2d3700689d21eee3f7ec7"
+  integrity sha512-Ww597Rm5xrFGkvwToWaxB018vE+boQ6bVtE57ODzDt3pfIpVCz+iuPVH5H3CL0IbePqelLb0TKN1XIK7nA/SAg==
   dependencies:
     "@figliolia/event-emitter" "^1.1.4"
 
@@ -338,12 +338,12 @@
   resolved "https://registry.yarnpkg.com/@figliolia/event-emitter/-/event-emitter-1.1.5.tgz#0c2786da56997d518cba8e542501aeead75cb1d4"
   integrity sha512-l7luLvIKPDgzF2dtuFd5SbO3i6fK0s1KRSmouUQddl9ZyxXpOKk/JLi0bLpLyzp+KjZMw1AUHXHT4ZYhEAICWg==
 
-"@figliolia/frame-pooler@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@figliolia/frame-pooler/-/frame-pooler-1.1.0.tgz#bfeb7e116f52adb3b8d0198e37650492342b10df"
-  integrity sha512-k6LVpZ8bjmRta9t1eUuF7+vB87QrZkTFw1EyVuSqGBI4sx5DZDAwyhkiLRKQ+itpA2mSGOxUw3955qIPTRuVuQ==
+"@figliolia/frame-pooler@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@figliolia/frame-pooler/-/frame-pooler-1.1.1.tgz#c89f1f1d827139591ad59aa45024d9ea570e5d6d"
+  integrity sha512-LJVDCUkewAHMSynI/TAMlT8icvFDlywRI/p/UrRb0CSAkA9ja6sPrkyjJmTTD3XAh09oo8jO6QGIvhUrTvsTXw==
   dependencies:
-    "@figliolia/data-structures" "^1.0.7"
+    "@figliolia/data-structures" "^1.0.8"
 
 "@figliolia/ts-packager@^1.1.0":
   version "1.1.0"
